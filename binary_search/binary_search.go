@@ -1,9 +1,14 @@
 package binarysearch
 
-func BinarySearch(arr []int, searchVal int) (int, bool) {
+// Search the index of a search value in given array. If there value is not available in the array
+// it returns ok as false.
+func BinarySearch(arr []int, searchVal int) (indx int, ok bool) {
+	// The lower and upper limits are the first index[0] and last index of the array
 	var lower = 0
+	// We minus to get the index
 	var upper = len(arr) - 1
 
+	//  As long the lower limit value has not overlap the upper limit
 	for lower <= upper {
 		mid := (lower + upper) / 2
 		midVal := arr[mid]

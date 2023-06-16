@@ -5,15 +5,13 @@ func InsertionSort(arr []int) []int {
 		searchingValue := arr[i]
 		for j := i - 1; j >= 0; j-- {
 			if searchingValue < arr[j] {
-				temp := searchingValue
-				searchingValue = arr[j]
-				arr[j] = temp
+				temp := arr[j]
+				arr[j] = searchingValue
+				arr[j+1] = temp
 			} else {
 				break
 			}
-			searchingValue = 
 		}
-
 	}
 	return arr
 }

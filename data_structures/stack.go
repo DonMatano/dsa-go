@@ -19,7 +19,7 @@ func (s *stack[T]) Destack() (element T, ok bool) {
 		return empty, false
 	}
 	d := s.data[0]
-	s.data = append(s.data[1:])
+	s.data = s.data[1:]
 	return d, true
 }
 

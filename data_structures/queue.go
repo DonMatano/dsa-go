@@ -18,7 +18,7 @@ func (q *Queue[T]) Dequeue() (element T, ok bool) {
 		return empty, false
 	}
 	d := q.data[0]
-	q.data = append(q.data[1:])
+	q.data = q.data[1:]
 	return d, true
 }
 
